@@ -1,0 +1,16 @@
+antelope
+grizzly+bear
+killer+whale
+beaver
+dalmatian
+persian+cat
+horse
+german+shepherd
+blue+whale
+siamese+cat
+skunk
+mole
+tiger
+hippopotamus
+leopard
+
