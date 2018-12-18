@@ -63,7 +63,7 @@ Note: A subset of the dataset, `data_samples.zip`, is provided in the repository
 
 ## Code
 
-Jupyter notebook `VisualSemanticModels_Squeezenet1_1.ipynb` contains the code for:
+Jupyter notebooks `VisualSemanticModels_Squeezenet1_1.ipynb` and `VisualSemanticModels_Resnet34.ipynb`(baseline) contain the code for:
 1. Data Augmentation (applying pixel and coordinate transforms to data)
 2. Hyperparameter Search
 3. Model Training
@@ -86,12 +86,17 @@ Model is saved after every epoch. PCA Analysis is done in Stage 2 where four ani
 
 Stage 2a: During backbone freeze, when only custom head is trained (5 epochs)
 
-![PCA Analysis Stage 2a](https://raw.githubusercontent.com/swarna04/cs230/master/PCA_Analysis_Squeezenet1_1/PCA_Squeezenet_retrainHeadOnly_Epochs1to5.gif)
+![PCA Analysis Stage 2a](https://raw.githubusercontent.com/swarna04/cs230/master/PCA_Analysis/PCA_Squeezenet_2a_Epochs1to5.gif)
 
-Stage 2a: During backbone unfreeze, when whole model is fine tuned (3 epochs)
+Stage 2b: During backbone unfreeze, when whole model is fine tuned (3 epochs)
 
-![PCA Analysis Stage 2b](https://raw.githubusercontent.com/swarna04/cs230/master/PCA_Analysis_Squeezenet1_1/PCA_Squeezenet_finetuneWholeModel_epochs1to3.gif)
+![PCA Analysis Stage 2b](https://raw.githubusercontent.com/swarna04/cs230/master/PCA_Analysis/PCA_Squeezenet_2b_Epochs1to3.gif)
 
+## Conclusion
+
+*Squeezenet 1.1 based model gives higher Top-1 accuracy and uses ~6MB (7% less space) for similar training parameters as baseline Resnet34!*
+
+It is feasible to build lightweight visual-semantic models for mobile applications while meeting acceptable performance thresholds.
 
 ## Resources
 
