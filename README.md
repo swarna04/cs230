@@ -78,6 +78,20 @@ Jupyter notebook `VisualSemanticModels_Squeezenet1_1.ipynb` contains the code fo
 
 Note: Models from Stage-1 and Stage-2 training phases for Squeezenet 1.1 (and baseline Resnet34) are provided in the repo as `models.zip`
 
+## PCA Analysis for Visual Semantic Model (Squeezenet 1.1 backbone)
+
+Model is saved after every epoch. PCA Analysis is done in Stage 2 where four animal categories are chosen viz., *elephant, buffalo, cow, dolphin* and their feature vector representation, for all valid samples, are obtained from model output. 
+
+2D Visualization of the normalized image feature vector representation for this sub-sample of the image classes along with normalized true fastText word vector representation for the same image class labels (represented by triangles) are shown below:
+
+Stage 2a: During backbone freeze, when only custom head is trained (5 epochs)
+
+![PCA Analysis Stage 2a](https://raw.githubusercontent.com/swarna04/cs230/master/PCA_Analysis_Squeezenet1_1/PCA_Squeezenet_retrainHeadOnly_Epochs1to5.gif)
+
+Stage 2a: During backbone unfreeze, when whole model is fine tuned (3 epochs)
+
+![PCA Analysis Stage 2b](https://raw.githubusercontent.com/swarna04/cs230/master/PCA_Analysis_Squeezenet1_1/PCA_Squeezenet_finetuneWholeModel_epochs1to3.gif)
+
 
 ## Resources
 
