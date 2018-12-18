@@ -19,7 +19,7 @@ Note: fastai v1 currently supports Linux only, and requires PyTorch v1 and Pytho
 
 The project implements a deep visual-semantic model based on Squeezenet 1.1 architecture and trained with fastText word vectors. The model takes in image input and outputs a 300-D image feature vector. Using nmslib, an efficient cross-platform similarity search, the output feature vector is used for (1) Image To Image: Searching similar Images in model predictions, (2) Image to Text: Predicting Label for an image based on nearest fastText word vector for the label in the dataset (3) Text to Image: Predicting nearest image for an input text label based on nearest image feature vector in model predictions to the fastText word vector for the given label (zero shot).
 
-![Visual-Semantic Embedding Model for Mobile](model_diagram.jpg)
+![Visual-Semantic Embedding Model for Mobile](https://raw.githubusercontent.com/swarna04/cs230/master/images/model_diagram.jpg)
 
 ## Download the AWA2 dataset
 
@@ -65,7 +65,7 @@ Note: A subset of the dataset, `data_samples.zip`, is provided in the repository
 
 Jupyter notebook `VisualSemanticModels_Squeezenet1_1.ipynb` contains the code for:
 1. Data Augmentation (applying pixel and coordinate transforms to data)
-2. Hyperparameter Search 
+2. Hyperparameter Search
 3. Model Training
 4. Displaying the results
 3. Error Analysis (Stage 1: Confusion Matrix, heatmaps. Stage 2: PCA Analysis)
@@ -73,8 +73,8 @@ Jupyter notebook `VisualSemanticModels_Squeezenet1_1.ipynb` contains the code fo
 
 **Model training** is performed in two stages:
 
-Stage 1: A CNN model for multi-classification task is trained for accuracy. Cross entropy loss is used in this stage.
-Stage 2: A visual-semantic model is trained (by throwing away the softmax layers used in Stage 1) to output a 300-D image feature vector. Cosine similarity loss, between image feature vector (300-D model output) and fastText word vector representation for true image label, is used in this second stage.
+- Stage 1: A CNN model for multi-classification task is trained for accuracy. Cross entropy loss is used in this stage.
+- Stage 2: A visual-semantic model is trained (by throwing away the softmax layers used in Stage 1) to output a 300-D image feature vector. Cosine similarity loss, between image feature vector (300-D model output) and fastText word vector representation for true image label, is used in this second stage.
 
 Note: Sample models from Stage-1 and Stage-2 training phases for Squeezenet 1.1 (and baseline Resnet34) are provided in the repo as `models.zip`
 
