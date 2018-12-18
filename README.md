@@ -76,7 +76,7 @@ Jupyter notebook `VisualSemanticModels_Squeezenet1_1.ipynb` contains the code fo
 - Stage 1: A CNN model for multi-classification task is trained for accuracy. Cross entropy loss is used in this stage.
 - Stage 2: A visual-semantic model is trained (by throwing away the softmax layers used in Stage 1) to output a 300-D image feature vector. Cosine similarity loss, between image feature vector (300-D model output) and fastText word vector representation for true image label, is used in this second stage.
 
-Note: Sample models from Stage-1 and Stage-2 training phases for Squeezenet 1.1 (and baseline Resnet34) are provided in the repo as `models.zip`
+Note: Models from Stage-1 and Stage-2 training phases for Squeezenet 1.1 (and baseline Resnet34) are provided in the repo as `models.zip`
 
 
 ## Resources
